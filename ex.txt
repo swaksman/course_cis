@@ -1,0 +1,12 @@
+create your own github user
+fork shimib/spring-petclinic
+
+
+1) write ansible playbook to: 
+	install git
+	git clone (USING THE GIT MODULE)
+
+
+2) manually create repository in github
+   git clone of the new repository (ansible)
+   manually put the playbook in the new repository and push it
