@@ -7,4 +7,9 @@
   - name: clone petclinic
     git: repo=https://github.com/shimib/spring-petclinic.git dest=~/spring-petclinic
   - name: clone course
-    git: repo=https://github.com/shimib/course_cis.git dest=~/course
+    git: repo=https://github.com/shimib/course_cis.git dest=~/course update=no
+  - name: create tmp dir
+    file: path=~/tmp state=directory
+  - name: download and extract maven
+    unarchive: src=http://apache.mivzakim.net/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz dest=~/tmp copy=no mode=755
+
