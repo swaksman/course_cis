@@ -22,7 +22,7 @@
     lineinfile: dest=/home/ec2-user/.bash_profile insertafter="^M2=" line="export M2"
   - name: Add M2 to PATH
     lineinfile: dest=/home/ec2-user/.bash_profile regexp="^PATH=.*:$M2" insertafter="^PATH=" line="PATH=$PATH:$M2"
- - name: Ensure Jenkins Yum repo present
+  - name: Ensure Jenkins Yum repo present
     become: yes
     become_method: sudo
     get_url: url=http://pkg.jenkins-ci.org/redhat/jenkins.repo
