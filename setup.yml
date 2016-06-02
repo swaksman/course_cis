@@ -33,4 +33,4 @@
   - name: Ensure Jenkins is running
     service: name=jenkins state=running enabled=true
     become: yes
-      become_method: sudo
+    become_method: sudo
