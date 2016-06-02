@@ -1,0 +1,13 @@
+
+- hosts: localhost
+  tasks:
+  - name: install docker-py
+    pip: name=docker-py version=1.2.1
+    become: yes
+    become_method: sudo
+  - name: docker build
+    docker_image:
+      path: /home/ec2-user/my_docker/
+      name: ansible_image
+    become: yes
+    become_method: sudo
